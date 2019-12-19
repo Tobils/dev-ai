@@ -8,6 +8,7 @@ b = [4, 5, 4, 4, 5, 5]
 c = [8, 9, 9, 8, 8, 9]
 label_class = ["class a", "class b", "class c"]
 
+print(label_class)
 
 
 

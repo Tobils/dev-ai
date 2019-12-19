@@ -39,9 +39,8 @@ def levenshtein_ratio_and_distance(s,t,ratio_calc=False):
                                 distance[row-1][col-1]+ cost)
     if ratio_calc == True :
         # Computation of the Levenshtein Distance Ratio
-        Ratio = 0.001
         print((len(s)+ len(t))- distance[row][col])
-        Ratio = Decimal((len(s)+len(t)) - distance[row][col]) / (len(s)+ len(t))
+        Ratio = ((len(s)+len(t)) - distance[row][col]) / (len(s)+ len(t))
         return Ratio
     else :
         return "The strings are {} edits away".format(distance[row][col])
@@ -49,7 +48,7 @@ def levenshtein_ratio_and_distance(s,t,ratio_calc=False):
 
 # Use fuzzy string
 str1 = "Apple Inc."
-str2 = "Apple Inc."
+str2 = "Apple Inc"
 
 Distance = levenshtein_ratio_and_distance(str1, str2)
 print(Distance)
